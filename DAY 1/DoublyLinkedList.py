@@ -34,6 +34,15 @@ class DoublyLinkedList:
             new.prev = None
             new.next = None
 
+    def reverse(self):
+        if self.head:
+            ptr = self.head
+            while ptr.next:
+                ptr = ptr.next
+            while ptr:
+                print(f"|{str(ptr.data)}|", end="<->")
+                ptr = ptr.prev
+            print("end")
     def __str__(self):
         ptr = self.head
         while ptr:
@@ -49,4 +58,4 @@ dll.insert_at_end(3)
 dll.insert_at_end(2)
 dll.insert_at_end(1)
 
-print(dll)
+dll.reverse()
