@@ -1,0 +1,3 @@
+1. Check Given LLinkedlist is palindrome or not
+2. Rotate n number of nodes in SLL
+3. Check number of prime numbers in SLL
