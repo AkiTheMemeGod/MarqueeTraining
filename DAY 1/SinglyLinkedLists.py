@@ -90,22 +90,38 @@ class SinglyLinkedList:
                 ptr = ptr.next
             print("\n")
 
-    def sort_sll(self):
+    def bubble_sort(self):
         if self.head:
             ptr = self.head
-            temp = None
             while ptr.next:
-                if ptr.data > ptr.next.data:
-                    ptr.data = temp
-                    ptr.next.data = ptr.data
-                    temp = ptr.next.data
+                forward = ptr.next
+                while forward:
+                    if ptr.data > forward.data:
+                        ptr.data , forward.data = forward.data, ptr.data
+                    forward = forward.next
                 ptr = ptr.next
 
+
+
+    def deletion_at_beginning(self):
+        if self.head:
+            ptr = self.head
+            self.head = ptr.next
+
+    def deletion_at_end(self):
+        if self.head:
+            ptr = self.head
+            pre = ptr
+            while ptr.next:
+                pre = ptr
+                ptr = ptr.next
+            pre.next = None
 
     def __str__(self):
         ptr = self.head
         while ptr:
-            print(str(ptr.data), end='->')
+            print(f"|{str(ptr.data)}|", end='->')
+
             ptr = ptr.next
         return "End"
 
@@ -113,37 +129,50 @@ class SinglyLinkedList:
 sll = SinglyLinkedList()
 
 while True:
-    option = int(input(
-        " 1 for append\n 2 for Beginning\n 3 for position\n 4 for searching nodes\n 5 find middle node \nEnter your option : "))
+    print("\nOptions:")
+    print("1. Append a node at the end")
+    print("2. Delete a node from the end")
+    print("3. Insert a node at a specific position")
+    print("4. Search for a node")
+    print("5. Find the middle node")
+    print("6. Reverse the linked list")
+    print("7. Print nodes up to the middle node")
+    print("8. Sort the linked list using bubble sort")
+    print("9. Exit")
+
+    option = int(input("Enter your option: "))
 
     if option == 1:
-        x = int(input("Enter the Node value to enter at append : "))
+        x = int(input("Enter the node value to append: "))
         sll.insert_at_end(x)
         print(sll)
-    if option == 2:
-        x = int(input("Enter the Node value to enter at beginning : "))
-        sll.insert_at_beginning(x)
+    elif option == 2:
+        sll.deletion_at_end()
         print(sll)
-    if option == 3:
-        x = int(input("Enter the Node value to enter at position : "))
-        pos = int(input("Enter the position : "))
+    elif option == 3:
+        x = int(input("Enter the node value to insert: "))
+        pos = int(input("Enter the position: "))
         sll.insert_at_position(x, pos)
         print(sll)
-    if option == 4:
-        x = int(input("Node to search : "))
+    elif option == 4:
+        x = int(input("Enter the node value to search: "))
         result = sll.search(x)
         if result:
-            print("The node is present in the linked list ")
+            print("The node is present in the linked list.")
         else:
-            print("The node is not present in the linked list")
-    if option == 5:
-        sll.find_mid()
-    if option == 6:
+            print("The node is not present in the linked list.")
+    elif option == 5:
+        print(f"The middle node value is: {sll.find_mid()}")
+    elif option == 6:
         sll.reverse()
         print(sll)
-
-    if option == 7:
+    elif option == 7:
         sll.tomid()
-    if option == 8:
-        sll.sort_sll()
+    elif option == 8:
+        sll.bubble_sort()
         print(sll)
+    elif option == 9:
+        print("Exiting...")
+        break
+    else:
+        print("Invalid option. Please try again.")
