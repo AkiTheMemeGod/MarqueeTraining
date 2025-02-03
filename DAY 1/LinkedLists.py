@@ -1,8 +1,5 @@
-from typing import no_type_check_decorator
-
-
 class Node:
-    def __init__(self, data):
+    def __init__(self, data: int):
         self.data = data
         self.next = None
 
@@ -61,7 +58,48 @@ class SinglyLinkedList:
         while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
-        print(f"The Middle Node is  -> {slow.data}")
+        # print(f"The Middle Node is  -> {slow.data}")
+        return slow.data
+
+    """def frommid(self):
+        if self.head:
+            slow = fast = self.head
+            while fast and fast.next:
+                slow = slow.next
+            self.head = slow"""
+
+
+    def reverse(self):
+        prev = None
+        current = self.head
+        while current:
+            next_node = current.next
+            current.next = prev
+            prev = current
+            current = next_node
+        self.head = prev
+
+    def tomid(self):
+        mid = self.find_mid()
+        if self.head:
+            ptr = self.head
+            while ptr:
+                print(ptr.data, end="->")
+                if ptr.data == mid:
+                    break
+                ptr = ptr.next
+            print("\n")
+
+    def sort_sll(self):
+        if self.head:
+            ptr = self.head
+            temp = None
+            while ptr.next:
+                if ptr.data > ptr.next.data:
+                    ptr.data = temp
+                    ptr.next.data = ptr.data
+                    temp = ptr.next.data
+                ptr = ptr.next
 
 
     def __str__(self):
@@ -76,7 +114,7 @@ sll = SinglyLinkedList()
 
 while True:
     option = int(input(
-        " 1 for append\n 2 for Begining\n 3 for position\n 4 for searching nodes\n 5 find middle node \nEnter your option : "))
+        " 1 for append\n 2 for Beginning\n 3 for position\n 4 for searching nodes\n 5 find middle node \nEnter your option : "))
 
     if option == 1:
         x = int(input("Enter the Node value to enter at append : "))
@@ -100,5 +138,12 @@ while True:
             print("The node is not present in the linked list")
     if option == 5:
         sll.find_mid()
+    if option == 6:
+        sll.reverse()
+        print(sll)
 
-
+    if option == 7:
+        sll.tomid()
+    if option == 8:
+        sll.sort_sll()
+        print(sll)
