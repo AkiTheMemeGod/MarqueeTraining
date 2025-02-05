@@ -82,7 +82,7 @@ for _ in range(6):
     if stk.peek() != 0:
         final.append(stk.pop())
     else:
-        stk.pop()   
+        stk.pop()
         zero += 1
     print(stk)
 for i in range(zero):
