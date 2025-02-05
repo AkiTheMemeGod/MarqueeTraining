@@ -1,0 +1,12 @@
+Queues
+
+Queues Follows lastinlastout or firstinfirstout
+
+operation in queues
+1. enqueue - > add value into queue
+2. dequeue -> delete value at the end of the queue
+3. size -> returns the current size of the queue
+
+4. is empty -> checks if the queue is empty or not
+
+we can do operation on both ends of the queue
