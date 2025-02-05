@@ -41,13 +41,8 @@ class Stack:
                 count += 1
         print("The Size of the Stack is : ",count)
 
-    def isEmpty(self):
-        if self.top is None:
-            print("The Stack is Empty")
-            return True
-        else:
-            print("The Stack is not Empty")
-            return False
+    def is_empty(self):
+        return self.top is None
 
     def __str__(self):
         ptr = self.top
@@ -59,7 +54,7 @@ class Stack:
 
 stk = Stack()
 
-"""stk.push(1)
+stk.push(1)
 stk.push(2)
 stk.push(3)
 stk.push(4)
@@ -68,27 +63,4 @@ stk.pop()
 print(stk)
 stk.peek()  
 stk.size()
-stk.isEmpty()"""
-
-maps = {
-    ']':'[',
-    '}' : '{',
-    ')' : '('
-}
-left = ['{', '[', '(']
-string = input("Enter a string : ")
-if string:
-    for i in string:
-        if i in left:
-            stk.push(i)
-
-        else:
-            if stk.peek() == maps[i]:
-                stk.pop()
-else:
-    print("Empty")
-if stk.isEmpty():
-    print("valid bracket string")
-else:
-    print("Not a valid bracket string")
-print(stk)
+stk.is_empty()
