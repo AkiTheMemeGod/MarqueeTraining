@@ -1,0 +1,19 @@
+Stacks and Queues
+
+I. STACKS
+
+1. Stacks is a linear data type
+
+it follows LIFO or FILO
+
+can implement using arrays and LinkedLists
+
+Operations in Stacks
+
+1. push
+2. pop
+3. Top
+4. Size
+5. isEmpty
+6. getstack ot __str__ ()
+
