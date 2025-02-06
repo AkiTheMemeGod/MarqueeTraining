@@ -1,0 +1,22 @@
+Collision pointers
+
+2 sum
+given a sorted array of integers arr and a target integer target , return true i there exist 2 elements in the array such that their sum
+equals target, otherwise return false
+
+input format
+the first line contains an integer n 1 <= n <= 10^5
+the second line contains n integers, the elements of the array arr []
+the third line contains an integer target
+
+output format
+return true if a pair with the sum equal to target is found, otherwise return false
+
+sample input
+7
+1 2 3 4 5 6 7
+10
+
+sample output
+true
+
