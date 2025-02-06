@@ -1,0 +1,19 @@
+Sliding Window:
+sliding window is a technique used for iterating through a finite test case, typically an array or strings
+in a specific and controlled way
+it involves creating a window which is a subset of the data that slides through the
+larger data set typically one element at a time m while performing a specific operation
+ on each subset of the data
+
+this technique is commonly used in algos like finding sub arrays a with specific sum, finding the longest substring with unique chars ,
+or solving problems that require a fixed size window to process elements efficiently
+
+2 types of sliding window
+
+1. fixed size sliding window
+ find the size of the window -K
+ compute the result for 1st window, include the first k elements of the data Struct
+ the use a loop to slide the window by 1 and keep computing the result window by window
+
+2. Variable Size sliding window:
+ 
