@@ -1,0 +1,10 @@
+The 2 pointer technique involves using two pointers to iterate through a data structure like an array or lined list.
+The key property is that the pointers move through the data structure in tandem, enabling us to compare or correlate
+the elements they point to.
+
+Common 2 pointer patterns:
+
+collision pointers
+forward / parallel pointers
+fast and slow pointers
+fixed distance pointers(Sliding Window)
