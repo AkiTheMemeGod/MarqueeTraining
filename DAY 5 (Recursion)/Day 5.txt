@@ -1,0 +1,22 @@
+power(x, n)
+fibonacci
+factorial
+
+quests:
+
+leetcode:
+
+509
+231
+326
+342
+print list of fibonacci
+1137 - leetcode
+
+
+code Tantra:
+
+3.3.7
+3.3.2
+3.3.5
+3.3.6
