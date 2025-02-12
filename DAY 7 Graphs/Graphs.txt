@@ -1,0 +1,16 @@
+Graph Representation
+
+1. Adjacency List
+    each node stores its neighbors
+    efficient for sparse graphs
+
+2. Adjacency Matrix:
+     Uses a 2D array Where matrix[i][j] = 1 if an edge exists
+     efficient for dense graphs
+
+BFS
+1. Start from a source node
+2. visit all immediate neighbors
+3. move to the next level and repeat
+- Uses a Queue (FIFO)
+- Best for : Shortest path problems, Finding Nearest Neighbor
