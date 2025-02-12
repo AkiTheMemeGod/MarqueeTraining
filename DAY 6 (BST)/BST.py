@@ -43,5 +43,14 @@ tree = BinarySearchTree()
 root = tree.create(8)
 for i in range(8):
     tree.insert(root, int(input()))
+
+print("inorder: ")
+print(tree.in_order(root))
+
+print("preorder: ")
 print(tree.pre_order(root))
+
+print("postorder: ")
+print(tree.post_order(root))
+
 
