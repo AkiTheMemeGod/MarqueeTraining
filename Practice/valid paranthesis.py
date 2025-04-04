@@ -28,5 +28,5 @@ class Solution():
             return False
 
 s = Solution()
-print(s.isValid("(){}{()[]}"))
+print(s.isValid("(){}{()[]}("))
 

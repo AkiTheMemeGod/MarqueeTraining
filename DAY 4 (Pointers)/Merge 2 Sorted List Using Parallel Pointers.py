@@ -1,9 +1,9 @@
-arra1 = list(map(int, input().split()))
-arra2 = list(map(int, input().split()))
+arra1 = list(map(int, input().split(",")))
+arra2 = list(map(int, input().split(",")))
 
-len1 = len(arra1)
-len2 = len(arra2)
 def parallel_po(arr1, arr2):
+    len1 = len(arr1)
+    len2 = len(arr2)
     p1, p2 = 0, 0
     sorted_arr = []
     while p1 < len1 and p2 < len2:

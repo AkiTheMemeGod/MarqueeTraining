@@ -12,6 +12,5 @@ while sub <= len(nums):
         continue
     i += 1
     sub = 0
-
 o = [len(set(i)) for i in sets]
 print(max(o))

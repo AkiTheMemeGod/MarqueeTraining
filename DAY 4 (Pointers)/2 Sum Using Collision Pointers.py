@@ -30,6 +30,7 @@ left, right = 0 , len(nums)-1
 while left < right:
     cur = nums[left] + nums[right]
     if cur == target:
+        print(nums[left], nums[right])
         print(True)
         exit()
     elif cur > target:

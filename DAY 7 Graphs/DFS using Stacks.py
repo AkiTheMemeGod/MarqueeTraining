@@ -14,8 +14,6 @@ stack = [start]
 visited.add(start)
 
 while stack:
-    # print(stack)
-
     node = stack.pop()
 
     print(node, end= " ")

@@ -17,7 +17,6 @@ class BinarySearchTree:
             node.left = self.insert(node.left, data)
         elif data > node.data:
             node.right = self.insert(node.right, data)
-
         return node
 
     def in_order(self, node):
@@ -39,6 +38,7 @@ class BinarySearchTree:
             print(node.data)
 
 
+
 tree = BinarySearchTree()
 root = tree.create(8)
 for i in range(8):
@@ -53,4 +53,5 @@ print(tree.pre_order(root))
 print("postorder: ")
 print(tree.post_order(root))
 
+print(tree.binaryTreePaths(root.data))
 

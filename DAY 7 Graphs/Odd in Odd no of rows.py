@@ -7,3 +7,4 @@ for i in range(1, n+1):
         else:
             print(j*2-1, end=" ")
     print()
+

@@ -70,11 +70,13 @@ if string:
     for i in string:
         if i in left:
             stk.push(i)
+            print(stk)
 
         else:
             if stk.peek() == maps[i]:
                 stk.pop()
                 count += 1
+            print(stk)
 
 else:
     print("Empty")

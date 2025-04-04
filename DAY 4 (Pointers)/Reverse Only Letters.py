@@ -1,5 +1,5 @@
 x = input("Enter a String : ")
-# x = list(x)
+x = list(x)
 f = 0
 r = len(x) - 1
 
@@ -16,4 +16,3 @@ for _ in x:
         f += 1
 x = "".join(x)
 print(x)
-

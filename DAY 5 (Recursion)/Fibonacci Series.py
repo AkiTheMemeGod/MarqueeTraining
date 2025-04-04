@@ -1,18 +1,8 @@
 x = int(input("Enter a number: "))
 
-li = []
+a, b = 0, 1
+print(a, end=" ")
 
-def fibonacci(n):
-
-    if n <= 0:
-        return 0
-    elif n == 1:
-        return 1
-    else:
-
-        return fibonacci(n-1) + fibonacci(n-2)
-
-for i in range(x+1):
-    li.append(fibonacci(i))
-
-print(li)
+for _ in range(1, x + 1):
+    print(b, end=" ")
+    a, b = b, a + b
